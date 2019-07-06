@@ -81,7 +81,7 @@ Directory is always shown and truncated to the value of `SPACEFISH_DIR_TRUNC`. W
 | `SPACEFISH_DIR_PREFIX` | `in·` | Prefix before current directory |
 | `SPACEFISH_DIR_LOCK_SHOW` | `true` | Show directory write-protected symbol |
 | `SPACEFISH_DIR_LOCK_SYMBOL` | ![·🔒](https://user-images.githubusercontent.com/11844760/47611530-7bf99c00-da8d-11e8-95da-f4ec1f23203a.png) | The symbol displayed if directory is write-protected (requires powerline patched font) |
-| `SPACESHIP_DIR_LOCK_COLOR` | `red` | Color for the lock symbol |
+| `SPACEFISH_DIR_LOCK_COLOR` | `red` | Color for the lock symbol |
 
 ### Hostname \(`host`\)
 
@@ -89,8 +89,8 @@ Hostname should only be shown while you are connected to another machine using S
 
 | Variable | Default | Meaning |
 | :--- | :---: | --- |
-| `SPACEFISH_HOST_SHOW` | `true` | Show host section (true/false) |
-| `SPACEFISH_HOST_SHOW_FULL` | `false` | Show full hostname section (true/false) |
+| `SPACEFISH_HOST_SHOW` | `true` | Show host section (`true`, `false`, `always`) |
+| `SPACEFISH_HOST_SHOW_FULL` | `false` | Show full hostname section (`true`, `false`) |
 | `SPACEFISH_HOST_PREFIX` | `at·` | Prefix before the hostname |
 | `SPACEFISH_HOST_SUFFIX` | `$SPACEFISH_PROMPT_DEFAULT_SUFFIX` | Suffix after the hostname |
 | `SPACEFISH_HOST_COLOR` | `blue` | Color of the hostname |
@@ -259,6 +259,19 @@ Conda section is shown when ```conda``` is installed and $CONDA_DEFAULT_ENV is s
 | `SPACEFISH_CONDA_SYMBOL` | `🅒·` | Character to be shown before Conda version |
 | `SPACEFISH_CONDA_COLOR` | `blue` | Color of Conda section |
 
+
+### Elixir \(`elixir`\)
+
+Elixir section is shown when ```mix.exs``` is found or elixir files are found and either kiex, exenv, elixir is avaiable on your path.
+
+| Variable | Default | Meaning |
+| :------- | :-----: | ------- |
+| `SPACEFISH_ELIXIR_SHOW` | `true` | Show current Elixir version |
+| `SPACEFISH_ELIXIR_PREFIX` | `$SPACEFISH_PROMPT_DEFAULT_PREFIX` | Prefix before the elixir section |
+| `SPACEFISH_ELIXIR_SUFFIX` | `$SPACEFISH_PROMPT_DEFAULT_SUFFIX` | Suffix after the elixir section |
+| `SPACEFISH_ELIXIR_SYMBOL` | `💧·` | Character to be shown before Elixir version |
+| `SPACEFISH_ELIXIR_COLOR` | `magenta` | Color of Elixir section |
+
 ### Pyenv \(`pyenv`\)
 
 Pyenv section is shown only in directories that contain `.python-version`, `requirements.txt`, `pyproject.toml`, or any other file with `.py` extension.
@@ -328,7 +341,7 @@ Kubernetes context is shown everywhere if `kubectl` binary is found.
 | Variable | Default | Meaning |
 | :------- | :-----: | ------- |
 | `SPACEFISH_KUBECONTEXT_SHOW` | `true` | Show current kubectl context |
-| `SPACESHIP_KUBECONTEXT_NAMESPACE_SHOW` | `true` | Show current kubectl context namespace|
+| `SPACEFISH_KUBECONTEXT_NAMESPACE_SHOW` | `true` | Show current kubectl context namespace|
 | `SPACEFISH_KUBECONTEXT_PREFIX` | `at ` | Prefix before the kubectl section |
 | `SPACEFISH_KUBECONTEXT_SUFFIX` | `$SPACEFISH_PROMPT_DEFAULT_SUFFIX` | Suffix after the kubectl section |
 | `SPACEFISH_KUBECONTEXT_SYMBOL` | `☸️ ` | Character to be shown before kubectl context |
